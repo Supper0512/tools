@@ -1,11 +1,13 @@
 import xlrd
+import os
 
 
 class ParserXLSX(object):
 
     def __init__(self, xls, txt):
-        self.xls_name = xls
-        self.txt_name = txt
+        self.dir_path = os.path.dirname(os.path.abspath(__file__)) + '/'
+        self.xls_name = self.dir_path + xls
+        self.txt_name = self.dir_path + txt
         self._xls_txt()
 
     def _xls_txt(self):
