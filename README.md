@@ -35,3 +35,18 @@
 # batch模块
 -  batch模块由start_batch模块启动
 -  crontab管理
+
+#  手动添加第一批种子
+-  run_add_seeds.sh 【无法运行，线上无法手动添加种子】
+-  修改
+   -  1.strategy/sw.py/read_seeds【方法】
+   -  2.把if self._mxxxxx 放入
+   -  3.修改condif/dbw.py/ 把if后等参数放入
+   -  4.urls --> list
+   -  5.把参数传入self.sche.seeds()
+
+# 重要 重要 重要【hbase】
+-  habse利用thrift和python模块happybase做连接
+-  连接本地hbase时需要把COMPACT改为False
+-  地址为python的site-packages下的frontear/setting
+-  本项目为修改后frontera
